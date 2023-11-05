@@ -30,7 +30,7 @@ services:
       - MYSQL_ROOT_PASSWORD=0000
       - MYSQL_DATABASE=kaddemdb
       - MYSQL_PORT=3306
-
+    restart: always
 
 networks:
   ci-network:
