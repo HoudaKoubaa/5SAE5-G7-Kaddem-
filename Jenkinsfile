@@ -6,6 +6,7 @@ pipeline {
 		
 		stage('Junit + Mockito Test') {
 			steps {
+				sh 'docker start ci-db'
 				sh 'mvn test'
 			      } 
 		}
@@ -46,8 +47,9 @@ pipeline {
          			}
      			  }
     		}
-		/* stage('Docker compose') {
-      		      steps { 
+		 stage('Docker compose') {
+      		      steps {
+	      sh 'docker stop ci-db'
 	      sh 'docker-compose up -d'
        }
            
