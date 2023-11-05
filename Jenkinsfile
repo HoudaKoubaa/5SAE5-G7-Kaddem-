@@ -52,6 +52,7 @@ pipeline {
 	      sh 'docker stop ci-db'
 	      sh 'docker-compose up -d'
        }
+		 }
            
 		}
 }
