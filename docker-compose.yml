@@ -17,7 +17,7 @@ services:
 
   ci-app:
     container_name: ci-spring
-    image: 
+    image: onstb/onstb:latest
     ports:
       - "8089:8089"
     networks:
