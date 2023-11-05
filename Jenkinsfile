@@ -31,12 +31,12 @@ pipeline {
 			    } 
 
 		 }*/  
-		 stage('Sonatype/Nexus deploy') {
+		 /*stage('Sonatype/Nexus deploy') {
 			steps {
 				//sh 'mvn clean deploy -DskipTests'
 				sh'mvn clean deploy -Dmaven.test.skip=true -Dresume=false'
 			      }
-		 } 
+		 }*/ 
 		/* stage('Docker Build and Push') {
                        steps {
                                withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
