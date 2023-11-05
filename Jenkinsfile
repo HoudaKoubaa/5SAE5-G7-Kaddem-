@@ -50,7 +50,7 @@ pipeline {
 		 stage('Docker compose') {
       		      steps {
 	      sh 'docker stop ci-db'
-               sh 'docker-compose up '
+               sh 'docker compose up '
            
        }
 		 }
