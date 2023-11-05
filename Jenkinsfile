@@ -47,27 +47,9 @@ pipeline {
      			  }
     		}
 		/* stage('Docker compose') {
-      		      steps {
-         parallel(
-           "Docker compose": {
-               sh 'docker-compose up '
-           },
-           "Delete running containers": {
-		       sh 'sleep 2m '
-               sh 'docker rm -f ci-spring ci-db ci-angular '
-           }
-         )
+      		      steps { 
+	      sh 'docker-compose up -d'
        }
-     }
-	}  
-			post {
-				success {
-
-					echo "passed"
-				}    
-			       failure {
-				       echo "failed"
-				
-		                }*/
+           
 		}
 }
