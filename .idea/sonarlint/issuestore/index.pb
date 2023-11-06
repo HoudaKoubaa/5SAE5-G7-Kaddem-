@@ -91,3 +91,13 @@ V
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 q
 Asrc/main/java/tn/esprit/spring/kaddem/entities/DepartmentDTO.java,1\3\1333e41aeb2a3a7179dfa6cdac24e71f35442970
+i
+9src/main/java/tn/esprit/spring/kaddem/DTO/ContratDTO.java,3\1\31a92c8d05742bc3c76fb63518fbd3215760528c
+m
+=src/main/java/tn/esprit/spring/kaddem/DTO/DepartementDTO.java,e\0\e0857bb12ab4b03b975effaee4ac4442a54a9217
+j
+:src/main/java/tn/esprit/spring/kaddem/DTO/EtudiantDTO.java,7\c\7c1b1ec7c90e5bc2e24d1a3d6ca45cf51bacd431
+l
+<src/main/java/tn/esprit/spring/kaddem/DTO/UniversiteDTO.java,6\6\6662e57ba107ff57c620d6fc293ac18759d8f723
+h
+8src/main/java/tn/esprit/spring/kaddem/DTO/EquipeDTO.java,5\b\5baae92d5d4a6c78c0b0d27ac0a6c86688ce4239

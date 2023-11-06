@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.spring.kaddem.DTO.ContratDTO;
 import tn.esprit.spring.kaddem.entities.Contrat;
 import tn.esprit.spring.kaddem.services.IContratService;
 
@@ -18,6 +19,8 @@ import java.util.List;
 public class ContratRestController {
 	IContratService contratService;
 	// http://localhost:8089/Kaddem/contrat/retrieve-all-contrats
+
+
 	@GetMapping("/retrieve-all-contrats")
 	public List<Contrat> getContrats() {
 		return contratService.retrieveAllContrats();
@@ -28,13 +31,40 @@ public class ContratRestController {
 	public Contrat retrieveContrat(@PathVariable("contrat-id") Integer contratId) {
 		return contratService.retrieveContrat(contratId);
 	}
+	// Method to convert ContratDTO to Contrat entity
+	private Contrat convertToContratEntity(ContratDTO contratDTO) {
+		Contrat contrat = new Contrat();
+		contrat.setDateDebutContrat(contratDTO.getDateDebutContrat());
+		contrat.setDateFinContrat(contratDTO.getDateFinContrat());
+		contrat.setSpecialite(contratDTO.getSpecialite());
+		contrat.setArchive(contratDTO.getArchive());
+		contrat.setMontantContrat(contratDTO.getMontantContrat());
+		// You may need to set other fields as well
+		return contrat;
+	}
+
+	// Method to convert Contrat entity to ContratDTO
+	private ContratDTO convertToContratDTO(Contrat contrat) {
+		ContratDTO contratDTO = new ContratDTO();
+		contratDTO.setDateDebutContrat(contrat.getDateDebutContrat());
+		contratDTO.setDateFinContrat(contrat.getDateFinContrat());
+		contratDTO.setSpecialite(contrat.getSpecialite());
+		contratDTO.setArchive(contrat.getArchive());
+		contratDTO.setMontantContrat(contrat.getMontantContrat());
+		// You may need to map other fields as well
+		return contratDTO;
+	}
+
 
 	// http://localhost:8089/Kaddem/econtrat/add-contrat
 	@PostMapping("/add-contrat")
-	public Contrat addContrat(@RequestBody Contrat c) {
-		return contratService.addContrat(c);
-
+	public ContratDTO addContrat(@RequestBody ContratDTO contratDTO) {
+		// Convert ContratDTO to Contrat entity and save it
+		Contrat newContrat = convertToContratEntity(contratDTO);
+		newContrat = contratService.addContrat(newContrat);
+		return convertToContratDTO(newContrat);
 	}
+
 
 	// http://localhost:8089/Kaddem/contrat/remove-contrat/1
 	@DeleteMapping("/remove-contrat/{contrat-id}")
@@ -44,8 +74,11 @@ public class ContratRestController {
 
 	// http://localhost:8089/Kaddem/contrat/update-contrat
 	@PutMapping("/update-contrat")
-	public Contrat updateContrat(@RequestBody Contrat c) {
-		return contratService.updateContrat(c);
+	public ContratDTO updateContrat(@RequestBody ContratDTO contratDTO) {
+		// Convert ContratDTO to Contrat entity, perform the update, and then convert it back to DTO
+		Contrat updatedContrat = convertToContratEntity(contratDTO);
+		updatedContrat = contratService.updateContrat(updatedContrat);
+		return convertToContratDTO(updatedContrat);
 	}
 
 

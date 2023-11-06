@@ -13,7 +13,6 @@ import tn.esprit.spring.kaddem.repositories.EquipeRepository;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 @Slf4j
 @AllArgsConstructor
@@ -112,6 +111,10 @@ public class EquipeServiceImpl implements IEquipeService{
 		}
 
 		equipeRepository.save(equipe);
+	}
+	public Equipe findById(Integer id) {
+		Optional<Equipe> equipeOptional = equipeRepository.findById(id);
+		return equipeOptional.orElse(null);
 	}
 
 }

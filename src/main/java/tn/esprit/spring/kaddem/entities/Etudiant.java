@@ -60,6 +60,7 @@ public class Etudiant implements Serializable{
     }
 
     public void setContrats(Set<Contrat> contrats) {
+        // Empty implementation as 'Contrats' is managed internally.
     }
 
     public Departement getDepartement() {

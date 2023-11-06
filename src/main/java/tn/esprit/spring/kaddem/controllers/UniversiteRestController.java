@@ -2,6 +2,7 @@ package tn.esprit.spring.kaddem.controllers;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.spring.kaddem.DTO.UniversiteDTO;
 import tn.esprit.spring.kaddem.entities.Departement;
 import tn.esprit.spring.kaddem.entities.Universite;
 import tn.esprit.spring.kaddem.services.IUniversiteService;
@@ -28,9 +29,13 @@ public class UniversiteRestController {
 
 	// http://localhost:8089/Kaddem/universite/add-universite
 	@PostMapping("/add-universite")
-	public Universite addUniversite(@RequestBody Universite u) {
-		return universiteService.addUniversite(u);
+	public UniversiteDTO addUniversite(@RequestBody UniversiteDTO universiteDTO) {
+		// Convert UniversiteDTO to Universite entity and then add it
+		Universite newUniversite = convertToUniversiteEntity(universiteDTO);
+		newUniversite = universiteService.addUniversite(newUniversite);
+		return convertToUniversiteDTO(newUniversite);
 	}
+
 
 	// http://localhost:8089/Kaddem/universite/remove-universite/1
 	@DeleteMapping("/remove-universite/{universite-id}")
@@ -40,9 +45,13 @@ public class UniversiteRestController {
 
 	// http://localhost:8089/Kaddem/universite/update-universite
 	@PutMapping("/update-universite")
-	public Universite updateUniversite(@RequestBody Universite u) {
-	return universiteService.updateUniversite(u);
+	public UniversiteDTO updateUniversite(@RequestBody UniversiteDTO universiteDTO) {
+		// Convert UniversiteDTO to Universite entity, perform the update, and then convert it back to DTO
+		Universite updatedUniversite = convertToUniversiteEntity(universiteDTO);
+		updatedUniversite = universiteService.updateUniversite(updatedUniversite);
+		return convertToUniversiteDTO(updatedUniversite);
 	}
+
 
 	//@PutMapping("/affecter-etudiant-departement")
 	@PutMapping(value="/affecter-universite-departement/{universiteId}/{departementId}")
@@ -55,6 +64,20 @@ public class UniversiteRestController {
 
 		return universiteService.retrieveDepartementsByUniversite(idUniversite);
 	}
+	private Universite convertToUniversiteEntity(UniversiteDTO universiteDTO) {
+		Universite universite = new Universite();
+		universite.setIdUniv(universiteDTO.getIdUniv());
+		universite.setNomUniv(universiteDTO.getNomUniv());
+		return universite;
+	}
+
+	private UniversiteDTO convertToUniversiteDTO(Universite universite) {
+		UniversiteDTO universiteDTO = new UniversiteDTO();
+		universiteDTO.setIdUniv(universite.getIdUniv());
+		universiteDTO.setNomUniv(universite.getNomUniv());
+		return universiteDTO;
+	}
+
 
 }
 
