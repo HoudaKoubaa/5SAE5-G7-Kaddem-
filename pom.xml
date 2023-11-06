@@ -14,9 +14,9 @@
     <name>kaddem</name>
     <description>kaddem</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
         <sonar.host.url>http://192.168.33.10:9000</sonar.host.url> <!-- URL de votre serveur SonarQube -->
-        <sonar.login>sqa_b15032f186457a9ef81c3e8a2c58c97f83e26c54 </sonar.login>
+        <sonar.login>sqa_968ea9dcdf4036cc6b6c471058245fde3af863bc </sonar.login>
     </properties>
     <dependencies>
         <dependency>
@@ -47,25 +47,18 @@
             <artifactId>springdoc-openapi-ui</artifactId>
             <version>1.6.9</version>
         </dependency>
-
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-test</artifactId>
-            <version>3.1.5</version>
-        </dependency>
-
-
     </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>deploymentRepo</id>
+            <name>Nexus Repository</name>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
 
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.7.0.1746</version> <!-- Utilisez la version appropriée -->
-            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -79,12 +72,9 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>9</source>
-                    <target>9</target>
-                </configuration>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.7.0.1746</version>
             </plugin>
         </plugins>
     </build>
