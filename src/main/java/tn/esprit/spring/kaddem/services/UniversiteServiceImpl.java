@@ -8,6 +8,7 @@ import tn.esprit.spring.kaddem.repositories.UniversiteRepository;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -33,9 +34,18 @@ return  (universiteRepository.save(u));
      return  (universiteRepository.save(u));
     }
 
-  public Universite retrieveUniversite (Integer idUniversite){
-return universiteRepository.findById(idUniversite).get();
+    public Universite retrieveUniversite(Integer idUniversite) {
+        Optional<Universite> optionalUniversite = universiteRepository.findById(idUniversite);
+
+        if (optionalUniversite.isPresent()) {
+            return optionalUniversite.get();
+        } else {
+            // Handle the case where the value is not present, for example, return null or throw an exception.
+            // You might want to decide how to handle this situation.
+            return null; // Or throw an exception if appropriate.
+        }
     }
+
     public  void deleteUniversite(Integer idUniversite){
         universiteRepository.delete(retrieveUniversite(idUniversite));
     }

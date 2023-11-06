@@ -15,6 +15,7 @@ import tn.esprit.spring.kaddem.repositories.EtudiantRepository;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Slf4j
@@ -39,9 +40,18 @@ public class EtudiantServiceImpl implements IEtudiantService{
 		return etudiantRepository.save(e);
 	}
 
-	public Etudiant retrieveEtudiant(Integer  idEtudiant){
-		return etudiantRepository.findById(idEtudiant).get();
+	public Etudiant retrieveEtudiant(Integer idEtudiant) {
+		Optional<Etudiant> optionalEtudiant = etudiantRepository.findById(idEtudiant);
+
+		if (optionalEtudiant.isPresent()) {
+			return optionalEtudiant.get();
+		} else {
+			// Handle the case where the value is not present, for example, return null or throw an exception.
+			// You might want to decide how to handle this situation.
+			return null; // Or throw an exception if appropriate.
+		}
 	}
+
 
 	public void removeEtudiant(Integer idEtudiant){
 	Etudiant e=retrieveEtudiant(idEtudiant);
