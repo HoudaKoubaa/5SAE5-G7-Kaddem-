@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7c22506-63f8-4fbd-bb5a-00292f24a634" name="Changes" comment="" />
+    <list default="true" id="b7c22506-63f8-4fbd-bb5a-00292f24a634" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/ContratDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/ContratDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/DepartementDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/DepartementDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/EquipeDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/EquipeDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/EtudiantDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/EtudiantDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/UniversiteDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/UniversiteDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/ContratRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/ContratRestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/DepartementRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/DepartementRestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/EquipeRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/EquipeRestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/EtudiantRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/EtudiantRestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/UniversiteRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/UniversiteRestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kaddem-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/kaddem-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/kaddem-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/kaddem-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +111,7 @@
       <workItem from="1699211891393" duration="627000" />
       <workItem from="1699214020184" duration="169000" />
       <workItem from="1699214238774" duration="464000" />
-      <workItem from="1699224280172" duration="14886000" />
+      <workItem from="1699224280172" duration="16156000" />
     </task>
     <servers />
   </component>

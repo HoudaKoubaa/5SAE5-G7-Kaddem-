@@ -111,3 +111,5 @@ i
 9src/main/java/tn/esprit/spring/kaddem/dto/ContratDTO.java,4\e\4e38b8caa3303f5c228893ff99c9ade422ef7423
 h
 8src/main/java/tn/esprit/spring/kaddem/dto/EquipeDTO.java,8\2\827d81cc28258ab042bd48833915b575fe4d7e23
+m
+=src/main/java/tn/esprit/spring/kaddem/dto/ContratDTOTest.java,9\a\9aa7fe5230993b2684937f175f9d1a521fcea05e
