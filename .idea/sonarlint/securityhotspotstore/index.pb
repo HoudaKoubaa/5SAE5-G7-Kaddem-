@@ -89,3 +89,5 @@ V
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+q
+Asrc/main/java/tn/esprit/spring/kaddem/entities/DepartmentDTO.java,1\3\1333e41aeb2a3a7179dfa6cdac24e71f35442970

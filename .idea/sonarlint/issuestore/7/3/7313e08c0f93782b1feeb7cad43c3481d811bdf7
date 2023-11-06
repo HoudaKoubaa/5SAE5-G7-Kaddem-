@@ -1,13 +1,11 @@
 
-n	java:S1355"YReduce the total number of break and continue statements in this loop to use at most one.(Ï¦ï¦
-n	java:S135."YReduce the total number of break and continue statements in this loop to use at most one.(ÎºÐí
-f	java:S1177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×ˆ¾­
-f	java:S1178"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×è³Ò
+u	java:S1354"YReduce the total number of break and continue statements in this loop to use at most one.(Ï¦ï¦8† ñ—º1
+u	java:S135."YReduce the total number of break and continue statements in this loop to use at most one.(ÎºÐí8‡ ñ—º1
+r	java:S1176"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Þ§ÆÃÿÿÿÿÿ8‡ ñ—º1
+r	java:S1177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±ÍÕ‹úÿÿÿÿ8ˆ ñ—º1
+J
+java:S54118"(Use a primitive boolean expression here.(³œñòüÿÿÿÿ8Š ñ—º1
 R
 java:S3655%"7Call "Optional#isPresent()" before accessing the value.(µ°Õ÷ûÿÿÿÿ
-m
-java:S3776,"RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(ÿ‚¡†üÿÿÿÿ
-Q	java:S1254"<This block of commented-out lines of code should be removed.(§«ÆÜ
-=
-java:S11259"'Remove the unnecessary boolean literal.(ºÙéÓ
-V	java:S125:"<This block of commented-out lines of code should be removed.(’¼¦¸ýÿÿÿÿ
+t
+java:S3776,"RRefactor this method to reduce its Cognitive Complexity from 33 to the 15 allowed.(ÿ‚¡†üÿÿÿÿ8å¢ñ—º1
