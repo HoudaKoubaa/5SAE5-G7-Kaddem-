@@ -19,6 +19,8 @@
         <sonar.login>sqa_08e69220af2aad029aa747fe903a937fe40f757b</sonar.login>
     </properties>
     <dependencies>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
