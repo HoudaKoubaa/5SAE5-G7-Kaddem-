@@ -1,4 +1,4 @@
-package tn.esprit.spring.kaddem.DTO;
+package tn.esprit.spring.kaddem.dto;
 
 public class DepartementDTO {
     private Integer idDepart;

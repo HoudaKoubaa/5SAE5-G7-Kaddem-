@@ -1,4 +1,4 @@
-package tn.esprit.spring.kaddem.DTO;
+package tn.esprit.spring.kaddem.dto;
 
 import tn.esprit.spring.kaddem.entities.Option;
 

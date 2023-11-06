@@ -101,3 +101,13 @@ l
 <src/main/java/tn/esprit/spring/kaddem/DTO/UniversiteDTO.java,6\6\6662e57ba107ff57c620d6fc293ac18759d8f723
 h
 8src/main/java/tn/esprit/spring/kaddem/DTO/EquipeDTO.java,5\b\5baae92d5d4a6c78c0b0d27ac0a6c86688ce4239
+m
+=src/main/java/tn/esprit/spring/kaddem/dto/DepartementDTO.java,9\4\94d4d381fba486db1d3fb7ad16175790364de8fe
+l
+<src/main/java/tn/esprit/spring/kaddem/dto/UniversiteDTO.java,2\2\22a261584e7b014a72ceced00c14a5145d88f3ed
+j
+:src/main/java/tn/esprit/spring/kaddem/dto/EtudiantDTO.java,4\b\4bfd998395a069eab3480901b7a566cd847c0cd9
+i
+9src/main/java/tn/esprit/spring/kaddem/dto/ContratDTO.java,4\e\4e38b8caa3303f5c228893ff99c9ade422ef7423
+h
+8src/main/java/tn/esprit/spring/kaddem/dto/EquipeDTO.java,8\2\827d81cc28258ab042bd48833915b575fe4d7e23
