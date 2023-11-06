@@ -10,8 +10,6 @@ import tn.esprit.spring.kaddem.entities.Etudiant;
 import tn.esprit.spring.kaddem.entities.Niveau;
 import tn.esprit.spring.kaddem.repositories.EquipeRepository;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -20,10 +18,11 @@ import java.util.Set;
 @AllArgsConstructor
 @Service
 public class EquipeServiceImpl implements IEquipeService{
-	@Autowired
+
 	EquipeRepository equipeRepository;
 
-	public List<Equipe> retrieveAllEquipes(){
+	public List<Equipe> retrieveAllEquipes()
+	{
 	return  (List<Equipe>) equipeRepository.findAll();
 	}
 
