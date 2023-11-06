@@ -14,7 +14,7 @@
     <name>kaddem</name>
     <description>kaddem</description>
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
         <sonar.host.url>http://192.168.33.10:9000</sonar.host.url> <!-- URL de votre serveur SonarQube -->
         <sonar.login>sqa_b15032f186457a9ef81c3e8a2c58c97f83e26c54 </sonar.login>
     </properties>
