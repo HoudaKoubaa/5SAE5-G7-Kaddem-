@@ -15,6 +15,8 @@
     <description>kaddem</description>
     <properties>
         <java.version>1.8</java.version>
+        <sonar.host.url>http://192.168.33.10:9000</sonar.host.url> <!-- URL de votre serveur SonarQube -->
+        <sonar.login>sqa_968ea9dcdf4036cc6b6c471058245fde3af863bc </sonar.login>
     </properties>
     <dependencies>
         <dependency>
@@ -72,7 +74,7 @@
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.7.0.1746</version> <!-- Utilisez la version appropriée -->
+                <version>3.7.0.1746</version>
             </plugin>
         </plugins>
     </build>
