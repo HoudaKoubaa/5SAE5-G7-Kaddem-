@@ -1,26 +1,26 @@
 package tn.esprit.spring.kaddem.services;
 
-
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.annotation.Order;
 import tn.esprit.spring.kaddem.entities.Universite;
 
 import java.util.List;
 
+@SpringBootTest
+@TestMethodOrder(OrderAnnotation.class)
 public class UniversiteServiceImplTest {
 
+    @Autowired
+    IUniversiteService us;
     @Test
-    public void testRetrieveAllUniversites() {
-        // Arrange
-        UniversiteServiceImpl universiteService = new UniversiteServiceImpl(); // You may need to inject your repositories or use mocks here
-        Universite universite1 = new Universite(/* Initialize with data */);
-        Universite universite2 = new Universite(/* Initialize with data */);
-
-        // Act
-        List<Universite> universites = universiteService.retrieveAllUniversites();
-
-        // Assert
-        Assertions.assertEquals(2, universites.size()); // Adjust based on the number of universities retrieved
-        // You can add more specific assertions to verify the contents of the list.
+    @Order(1)
+    public void retrieveAllUniversites(){
+        List<Universite> listUniversite = us.retrieveAllUniversites();
+        Assertions.assertEquals(0, listUniversite.size());
     }
 }

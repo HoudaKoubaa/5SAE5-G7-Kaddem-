@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7c22506-63f8-4fbd-bb5a-00292f24a634" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22a261584e7b014a72ceced00c14a5145d88f3ed" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22a261584e7b014a72ceced00c14a5145d88f3ed" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4bfd998395a069eab3480901b7a566cd847c0cd9" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4bfd998395a069eab3480901b7a566cd847c0cd9" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e6869b0323c70da756242f79c0ddbce8e19bf5b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e6869b0323c70da756242f79c0ddbce8e19bf5b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/kaddem/services/UniversiteServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/kaddem/services/UniversiteServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/services/UniversiteServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/services/UniversiteServiceImplTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +104,7 @@
       <workItem from="1699214238774" duration="464000" />
       <workItem from="1699224280172" duration="16261000" />
       <workItem from="1699353342433" duration="1888000" />
-      <workItem from="1699355254730" duration="3781000" />
+      <workItem from="1699355254730" duration="11294000" />
     </task>
     <servers />
   </component>
