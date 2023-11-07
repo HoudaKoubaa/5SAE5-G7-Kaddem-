@@ -33,12 +33,12 @@ pipeline {
 
 		 }
 		
-		 stage('Sonatype/Nexus deploy') {
+/*		 stage('Sonatype/Nexus deploy') {
 			steps {
 				//sh 'mvn clean deploy -DskipTests'
 				sh'mvn clean deploy -Dmaven.test.skip=true -Dresume=false'
 			      }
-		 }
+		 } */
 
 		
 		 stage('Docker Build and Push') {
@@ -53,13 +53,13 @@ pipeline {
     		}
 
 		
-		 stage('Docker compose') {
+	/*	 stage('Docker compose') {
       		      steps {
 	      sh 'docker stop cidb'
                sh 'docker compose up '
            
        }
-		 }
+		 }  */
            
 		}
 }
