@@ -89,8 +89,6 @@ V
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-q
-Asrc/main/java/tn/esprit/spring/kaddem/entities/DepartmentDTO.java,1\3\1333e41aeb2a3a7179dfa6cdac24e71f35442970
 i
 9src/main/java/tn/esprit/spring/kaddem/DTO/ContratDTO.java,3\1\31a92c8d05742bc3c76fb63518fbd3215760528c
 m
@@ -111,5 +109,3 @@ i
 9src/main/java/tn/esprit/spring/kaddem/dto/ContratDTO.java,4\e\4e38b8caa3303f5c228893ff99c9ade422ef7423
 h
 8src/main/java/tn/esprit/spring/kaddem/dto/EquipeDTO.java,8\2\827d81cc28258ab042bd48833915b575fe4d7e23
-m
-=src/main/java/tn/esprit/spring/kaddem/dto/ContratDTOTest.java,9\a\9aa7fe5230993b2684937f175f9d1a521fcea05e

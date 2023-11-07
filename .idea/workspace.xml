@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7c22506-63f8-4fbd-bb5a-00292f24a634" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/1333e41aeb2a3a7179dfa6cdac24e71f35442970" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/a/9aa7fe5230993b2684937f175f9d1a521fcea05e" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/3/1333e41aeb2a3a7179dfa6cdac24e71f35442970" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/a/9aa7fe5230993b2684937f175f9d1a521fcea05e" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/ContratDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/ContratDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/DepartementDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/DepartementDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/EquipeDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/EquipeDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/EtudiantDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/EtudiantDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/UniversiteDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/DTO/UniversiteDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/ContratRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/ContratRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/DepartementRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/DepartementRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/EquipeRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/EquipeRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/EtudiantRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/EtudiantRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/UniversiteRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/controllers/UniversiteRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kaddem-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/kaddem-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/kaddem-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/kaddem-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,26 +50,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/FEDI/Documents/GitHub/5SAE5-G7-Kaddem-",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/FEDI/Documents/GitHub/5SAE5-G7-Kaddem-&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="5SAE5-G7-Kaddem-" />
@@ -111,7 +103,8 @@
       <workItem from="1699211891393" duration="627000" />
       <workItem from="1699214020184" duration="169000" />
       <workItem from="1699214238774" duration="464000" />
-      <workItem from="1699224280172" duration="16156000" />
+      <workItem from="1699224280172" duration="16261000" />
+      <workItem from="1699353342433" duration="214000" />
     </task>
     <servers />
   </component>
