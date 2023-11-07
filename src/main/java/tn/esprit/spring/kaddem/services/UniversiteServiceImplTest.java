@@ -4,7 +4,6 @@ package tn.esprit.spring.kaddem.services;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import tn.esprit.spring.kaddem.entities.Universite;
-import tn.esprit.spring.kaddem.services.UniversiteServiceImpl;
 
 import java.util.List;
 
