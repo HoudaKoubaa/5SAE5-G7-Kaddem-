@@ -5,6 +5,7 @@ tn\esprit\spring\kaddem\entities\Niveau.class
 tn\esprit\spring\kaddem\repositories\DepartementRepository.class
 tn\esprit\spring\kaddem\services\UniversiteServiceImpl.class
 tn\esprit\spring\kaddem\controllers\UniversiteRestController.class
+tn\esprit\spring\kaddem\services\EtudiantServiceTest.class
 tn\esprit\spring\kaddem\controllers\EquipeRestController.class
 tn\esprit\spring\kaddem\controllers\EtudiantRestController.class
 tn\esprit\spring\kaddem\entities\Universite.class
