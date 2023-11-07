@@ -88,7 +88,7 @@
     <distributionManagement>
         <repository>
             <id>deploymentRepo</id>
-            <url>http://192.168.33.10:8081/repository/maven-releases/</url>
+            <url>http://192.168.223.128:8081/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
     <build>
@@ -105,17 +105,11 @@
                     </excludes>
                 </configuration>
             </plugin>
-            <!--                   Jacoco Plugin                   -->
 
-
-            <!--                   nexus Plugin                   -->
 
             <plugin>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>2.8.1</version>
-                <!-- <configuration>
-                    <skip>true</skip>
-                 </configuration> -->
                 <executions>
                     <execution>
                         <id>default-deploy</id>
