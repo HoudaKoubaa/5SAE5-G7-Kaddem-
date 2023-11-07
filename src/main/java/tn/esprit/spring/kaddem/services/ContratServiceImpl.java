@@ -22,7 +22,7 @@ ContratRepository contratRepository;
 @Autowired
 	EtudiantRepository etudiantRepository;
 	public List<Contrat> retrieveAllContrats(){
-		return (List<Contrat>) contratRepository.findAll();
+		return  contratRepository.findAll();
 	}
 
 	public Contrat updateContrat (Contrat  ce){
@@ -49,9 +49,9 @@ ContratRepository contratRepository;
 		Contrat ce=contratRepository.findByIdContrat(idContrat);
 		Set<Contrat> contrats= e.getContrats();
 		Integer nbContratssActifs=0;
-		if (contrats.size()!=0) {
+		if (contrats.isEmpty()) {
 			for (Contrat contrat : contrats) {
-				if (((contrat.getArchive())!=null)&& ((contrat.getArchive())!=false))  {
+				if (((contrat.getArchive())!=null)){
 					nbContratssActifs++;
 				}
 			}
@@ -71,14 +71,14 @@ ContratRepository contratRepository;
 		List<Contrat>contratsAarchiver=null;
 		for (Contrat contrat : contrats) {
 			Date dateSysteme = new Date();
-			if (contrat.getArchive()==false) {
-				long difference_In_Time = dateSysteme.getTime() - contrat.getDateFinContrat().getTime();
-				long difference_In_Days = (difference_In_Time / (1000 * 60 * 60 * 24)) % 365;
-				if (difference_In_Days==15){
+			if (contrat.getArchive()) {
+				long differenceTime = dateSysteme.getTime() - contrat.getDateFinContrat().getTime();
+				long differenceDays = (differenceTime / (1000 * 60 * 60 * 24)) % 365;
+				if (differenceDays==15){
 					contrats15j.add(contrat);
 					log.info(" Contrat : " + contrat);
 				}
-				if (difference_In_Days==0) {
+				if (differenceDays==0) {
 					contratsAarchiver.add(contrat);
 					contrat.setArchive(true);
 					contratRepository.save(contrat);
@@ -87,9 +87,9 @@ ContratRepository contratRepository;
 		}
 	}
 	public float getChiffreAffaireEntreDeuxDates(Date startDate, Date endDate){
-		float difference_In_Time = endDate.getTime() - startDate.getTime();
-		float difference_In_Days = (difference_In_Time / (1000 * 60 * 60 * 24)) % 365;
-		float difference_In_months =difference_In_Days/30;
+		float differenceTime = endDate.getTime() - (float)startDate.getTime();
+		float differenceDays = (differenceTime / (1000 * 60 * 60 * 24)) % 365;
+		float difference_In_months =differenceDays/30;
         List<Contrat> contrats=contratRepository.findAll();
 		float chiffreAffaireEntreDeuxDates=0;
 		for (Contrat contrat : contrats) {
@@ -101,7 +101,7 @@ ContratRepository contratRepository;
 			else if (contrat.getSpecialite()== Specialite.RESEAUX) {
 				chiffreAffaireEntreDeuxDates+=(difference_In_months*350);
 			}
-			else //if (contrat.getSpecialite()== Specialite.SECURITE)
+			else
 			 {
 				 chiffreAffaireEntreDeuxDates+=(difference_In_months*450);
 			}

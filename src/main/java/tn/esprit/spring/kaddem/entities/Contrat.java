@@ -1,5 +1,7 @@
 package tn.esprit.spring.kaddem.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.io.Serializable;
@@ -9,6 +11,8 @@ import javax.persistence.*;
 
 @Entity
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Contrat implements Serializable{
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -24,9 +28,7 @@ public class Contrat implements Serializable{
     @ManyToOne(cascade = CascadeType.ALL)
     private Etudiant etudiant;
 
-    public Contrat() {
-        // TODO Auto-generated constructor stub
-    }
+
 
     public Contrat(Date dateDebutContrat, Date dateFinContrat, Specialite specialite, Boolean archive,
                    Integer montantContrat) {
