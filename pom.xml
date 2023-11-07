@@ -16,7 +16,7 @@
     <properties>
         <java.version>1.8</java.version>
         <sonar.host.url>http://192.168.33.10:9000</sonar.host.url> <!-- URL de votre serveur SonarQube -->
-        <sonar.login>sqa_08e69220af2aad029aa747fe903a937fe40f757b</sonar.login>
+        <sonar.login>sqa_7994ac7aac9615461c2eeaebb8ee49cf053fe83a</sonar.login>
     </properties>
     <dependencies>
 
