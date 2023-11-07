@@ -4,7 +4,7 @@ pipeline {
 
 	stages {
 		
-		stage('Junit + Mockito Test') {
+		stage('Junit') {
 			steps {
 				sh 'docker start cidb'
 				sh 'mvn test'
