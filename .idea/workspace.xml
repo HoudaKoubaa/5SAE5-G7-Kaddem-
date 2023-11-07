@@ -7,9 +7,12 @@
     <list default="true" id="b7c22506-63f8-4fbd-bb5a-00292f24a634" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22a261584e7b014a72ceced00c14a5145d88f3ed" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22a261584e7b014a72ceced00c14a5145d88f3ed" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4bfd998395a069eab3480901b7a566cd847c0cd9" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4bfd998395a069eab3480901b7a566cd847c0cd9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9cba29371d0a7949c365c7437705012c3dd67927" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9cba29371d0a7949c365c7437705012c3dd67927" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e6869b0323c70da756242f79c0ddbce8e19bf5b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e6869b0323c70da756242f79c0ddbce8e19bf5b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/kaddem/services/UniversiteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/kaddem/services/UniversiteServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/kaddem/services/UniversiteServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/kaddem/services/UniversiteServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/services/UniversiteServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/services/UniversiteServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/services/UniversiteServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/services/UniversiteServiceImplTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +72,22 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.UniversiteServiceImplTest">
+    <configuration name="UniversiteServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kaddem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tn.esprit.spring.kaddem.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tn.esprit.spring.kaddem.services" />
+      <option name="MAIN_CLASS_NAME" value="tn.esprit.spring.kaddem.services.UniversiteServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="5SAE5-G7-Kaddem-" />
       <method v="2">
@@ -90,6 +108,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UniversiteServiceImplTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -104,7 +127,7 @@
       <workItem from="1699214238774" duration="464000" />
       <workItem from="1699224280172" duration="16261000" />
       <workItem from="1699353342433" duration="1888000" />
-      <workItem from="1699355254730" duration="11294000" />
+      <workItem from="1699355254730" duration="12772000" />
     </task>
     <servers />
   </component>

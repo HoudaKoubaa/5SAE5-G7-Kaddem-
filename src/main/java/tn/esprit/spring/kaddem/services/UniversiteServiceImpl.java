@@ -1,5 +1,6 @@
 package tn.esprit.spring.kaddem.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tn.esprit.spring.kaddem.entities.Departement;
 import tn.esprit.spring.kaddem.entities.Universite;
@@ -18,8 +19,11 @@ public class UniversiteServiceImpl implements IUniversiteService{
 
     DepartementRepository departementRepository;
     public UniversiteServiceImpl() {
-        // This class relies on the default constructor provided by Java.
-        // Custom initialization is not required at this time.
+     final UniversiteRepository universiteRepository;
+    }
+    @Autowired
+    public UniversiteServiceImpl(UniversiteRepository universiteRepository) {
+        this.universiteRepository = universiteRepository;
     }
 
   public   List<Universite> retrieveAllUniversites(){
