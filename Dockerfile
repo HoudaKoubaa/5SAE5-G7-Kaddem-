@@ -1,4 +1,4 @@
-FROM ubuntu:latest
-LABEL authors="SEIF"
+FROM openjdk
+EXPOSE 8080
 COPY target/kaddem-0.0.1-SNAPSHOT.jar kaddem-docker.jar
 ENTRYPOINT ["java", "-jar", "kaddem-docker.jar"]
