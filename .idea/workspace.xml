@@ -7,15 +7,15 @@
     <list default="true" id="b7c22506-63f8-4fbd-bb5a-00292f24a634" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22a261584e7b014a72ceced00c14a5145d88f3ed" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22a261584e7b014a72ceced00c14a5145d88f3ed" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4bfd998395a069eab3480901b7a566cd847c0cd9" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4bfd998395a069eab3480901b7a566cd847c0cd9" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e6869b0323c70da756242f79c0ddbce8e19bf5b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e6869b0323c70da756242f79c0ddbce8e19bf5b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e6869b0323c70da756242f79c0ddbce8e19bf5b" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/e/9e6869b0323c70da756242f79c0ddbce8e19bf5b" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tn/esprit/spring/kaddem/services/UniversiteServiceImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tn/esprit/spring/kaddem/services/UniversiteServiceImplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaddem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kaddem.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/kaddem-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/kaddem-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/kaddem-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/kaddem-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,13 +68,21 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.UniversiteServiceImplTest">
+  <component name="RunManager" selected="Spring Boot.KaddemApplication">
+    <configuration name="All in kaddem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kaddem" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UniversiteServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kaddem" />
       <extension name="coverage">
@@ -85,6 +93,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="tn.esprit.spring.kaddem.services" />
       <option name="MAIN_CLASS_NAME" value="tn.esprit.spring.kaddem.services.UniversiteServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UniversiteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kaddem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tn.esprit.spring.kaddem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tn.esprit.spring.kaddem" />
+      <option name="MAIN_CLASS_NAME" value="tn.esprit.spring.kaddem.UniversiteTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -112,6 +135,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in kaddem" />
+        <item itemvalue="JUnit.UniversiteTest" />
         <item itemvalue="JUnit.UniversiteServiceImplTest" />
       </list>
     </recent_temporary>
@@ -129,7 +154,8 @@
       <workItem from="1699214238774" duration="464000" />
       <workItem from="1699224280172" duration="16261000" />
       <workItem from="1699353342433" duration="1888000" />
-      <workItem from="1699355254730" duration="15122000" />
+      <workItem from="1699355254730" duration="17130000" />
+      <workItem from="1699388149678" duration="2096000" />
     </task>
     <servers />
   </component>
