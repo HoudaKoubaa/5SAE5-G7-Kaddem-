@@ -5,7 +5,9 @@ services:
     image: mysql:5.6
     container_name: db-mysql
     environment:
-      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_ROOT_USERNAME=root
+      - MYSQL_ROOT_PASSWORD=0000
+      - MYSQL_DATABASE=kaddemdb
     ports:
       - "3307:3306"
     restart: unless-stopped
@@ -18,5 +20,8 @@ services:
     depends_on:
       - db-mysql
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://db-mysql:3306/kaddem\db?useUnicode=true&useJDBCCompliantTimezoneShift=true&createDatabaseIfNotExist=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-      - SPRING_DATASOURCE_USERNAME=root
+      - MYSQL_HOST=ci-db
+      - MYSQL_ROOT_USERNAME=root
+      - MYSQL_ROOT_PASSWORD=0000
+      - MYSQL_DATABASE=kaddemdb
+      - MYSQL_PORT=3306
