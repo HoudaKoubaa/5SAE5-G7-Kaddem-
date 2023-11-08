@@ -1,22 +1,40 @@
-version: '3'
-
+version: '3.7'
 services:
-  db-mysql:
-    image: mysql:5.6
-    container_name: db-mysql
+  ci-db:
+    container_name: ci-db
+    image: mysql:latest
+    networks:
+      - ci-network
     environment:
-      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_ROOT_USERNAME=root
+      - MYSQL_ROOT_PASSWORD=0000
+      - MYSQL_DATABASE=kaddemdb
+    volumes:
+      - dbvol:/var/lib/mysql
     ports:
-      - "3307:3306"
-    restart: unless-stopped
+      - "3306:3306"
+    restart: always
 
-  kaddem-app:
-    image: onstb
-    restart: unless-stopped
+  ci-app:
+    container_name: ci-spring
+    image: onstb/onstb:latest
     ports:
-      - 8089:8089
+      - "8089:8089"
+    networks:
+      - ci-network
     depends_on:
-      - db-mysql
+      - ci-db
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://db-mysql:3306/kaddem\db?useUnicode=true&useJDBCCompliantTimezoneShift=true&createDatabaseIfNotExist=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-      - SPRING_DATASOURCE_USERNAME=root
+      - MYSQL_HOST=ci-db
+      - MYSQL_ROOT_USERNAME=root
+      - MYSQL_ROOT_PASSWORD=0000
+      - MYSQL_DATABASE=kaddemdb
+      - MYSQL_PORT=3306
+    restart: always
+
+networks:
+  ci-network:
+    name: ci-network
+
+volumes:
+  dbvol:
