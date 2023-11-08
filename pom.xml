@@ -61,11 +61,16 @@
             <artifactId>mockito-core</artifactId>
             <version>4.2.0</version> <!-- Update to a compatible Mockito version -->
         </dependency>
+        <dependency>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.6</version>
+        </dependency>
+
     </dependencies>
     <distributionManagement>
         <repository>
             <id>deploymentRepo</id>
-            <name>Nexus Repository</name>
             <url>http://192.168.33.10:8081/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
