@@ -46,8 +46,8 @@ pipeline {
                                withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
          			  sh 'printenv'
         			  sh 'docker build -t onstb/onstb .'
-	 			  sh 'docker tag onstb/onstb onstb/onstb:latest'
-         			  sh 'docker push onstb/onstb:latest'
+	 		/*	  sh 'docker tag onstb/onstb onstb/onstb:latest'
+         			  sh 'docker push onstb/onstb:latest' */
          			}
      			  }
     		}
