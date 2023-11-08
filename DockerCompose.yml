@@ -1,0 +1,40 @@
+version: '3.7'
+services:
+  my-db:
+    container_name: my-db
+    image: mysql:latest
+    networks:
+      - ci-network
+    environment:
+      - MYSQL_ROOT_USERNAME=root
+      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_DATABASE=db
+    volumes:
+      - dbvol:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    restart: always
+
+  my-app:
+    container_name: my-spring
+    image: houdakoubaa/houdakoubaa-5sae5-g7-kaddem:latest
+    ports:
+      - "8089:8089"
+    networks:
+      - my-network
+    depends_on:
+      - my-db
+    environment:
+      - MYSQL_HOST=ci-db
+      - MYSQL_ROOT_USERNAME=root
+      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_DATABASE=db
+      - MYSQL_PORT=3306
+    restart: always
+
+networks:
+  my-network:
+    name: my-network
+
+volumes:
+  dbvol:
