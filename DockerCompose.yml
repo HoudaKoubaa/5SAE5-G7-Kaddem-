@@ -1,10 +1,27 @@
 version: '3.7'
+
 services:
+  nexus:
+    image: sonatype/nexus3
+    ports:
+      - "8081:8081"
+    volumes:
+      - nexus-data:/nexus-data
+
+  sonarqube:
+    image: sonarqube
+    ports:
+      - "9000:9000"
+    volumes:
+      - SonarQube-data:/opt/sonarqube/data
+      - SonarQube-extensions:/opt/sonarqube/extensions
+      - SonarQube-logs:/opt/sonarqube/logs
+
   my-db:
     container_name: my-db
     image: mysql:latest
     networks:
-      - ci-network
+      - my-network
     environment:
       - MYSQL_ROOT_USERNAME=root
       - MYSQL_ROOT_PASSWORD=
@@ -25,7 +42,7 @@ services:
     depends_on:
       - my-db
     environment:
-      - MYSQL_HOST=ci-db
+      - MYSQL_HOST=my-db
       - MYSQL_ROOT_USERNAME=root
       - MYSQL_ROOT_PASSWORD=
       - MYSQL_DATABASE=db
@@ -38,3 +55,7 @@ networks:
 
 volumes:
   dbvol:
+  nexus-data:
+  SonarQube-data:
+  SonarQube-extensions:
+  SonarQube-logs:
