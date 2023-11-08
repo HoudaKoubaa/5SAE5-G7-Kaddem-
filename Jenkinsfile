@@ -18,7 +18,7 @@ pipeline {
 			      }
 		}
 		       
-	/*	stage('SonarQube + JacOcO Analysis') {
+		stage('SonarQube + JacOcO Analysis') {
 			steps {
 				sh "mvn  sonar:sonar -Dsonar.projectKey=project-ci  -Dsonar.host.url=http://192.168.33.10:9000  -Dsonar.login=sqp_3fa1853e4657764cc9564759b04e3ba105f08b77"
 
@@ -31,7 +31,7 @@ pipeline {
 				       }    
 			    } 
 
-		 }  */
+		 }  
 		
 	/*	 stage('Sonatype/Nexus deploy') {
 			steps {
@@ -41,7 +41,7 @@ pipeline {
 		 } */
 
 		
-	/*	 stage('Docker Build and Push') {
+		 stage('Docker Build and Push') {
                        steps {
                                   withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
          			  sh 'printenv'
@@ -50,7 +50,7 @@ pipeline {
          			  sh 'docker push onstb/onstb:latest' 
          			}
 		       }
-    		} */
+    		} 
 
 		
 /*		 stage('Docker compose') {
