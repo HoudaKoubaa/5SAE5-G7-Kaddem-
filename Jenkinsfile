@@ -1,66 +1,45 @@
-
 pipeline {
+    agent any
 
-	agent any
+    stages{
+        stage('Checkout GIT'){
+            steps {
+                echo 'Pulling..'
+                    git branch: 'seifkorbi-5SAE5-G7',
+                    url:'https://github.com/HoudaKoubaa/5SAE5-G7-Kaddem-'
+            }
+        }
 
-	stages {
+        stage('GIT'){
+            steps{
+                echo "Getting project from Git";
+            }
+        }
+        stage('Testing Maven'){
+            steps {
+                sh "mvn clean test"
 
-		stage('Junit') {
-			steps {
-				sh 'docker start cidb'
-				sh 'mvn test'
-			      }
-		}
-
-		stage('Build Artifact - Maven') {
-			steps {
-				sh "mvn clean package -DskipTests=true"
-				archive 'target/*.jar'
-			      }
-		}
-
-/*		stage('SonarQube + JacOcO Analysis') {
-			steps {
-				sh "mvn  sonar:sonar -Dsonar.projectKey=project-ci  -Dsonar.host.url=http://192.168.33.10:9000  -Dsonar.login=sqp_3fa1853e4657764cc9564759b04e3ba105f08b77"
-
-			}
-		        post {
-				always {
-
-					jacoco execPattern: 'target/jacoco.exec'
-
-				       }
-			    }
-
-		 }  */
-
-		 stage('Sonatype/Nexus deploy') {
-			steps {
-				//sh 'mvn clean deploy -DskipTests'
-				sh'mvn clean deploy -Dmaven.test.skip=true -Dresume=false'
-			      }
-		 }
-
-
-		 stage('Docker Build and Push') {
-                       steps {
-                               withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
-         			  sh 'printenv'
-        			  sh 'docker build -t onstb/onstb .'
-	 			  sh 'docker tag onstb/onstb onstb/onstb:latest'
-         			  sh 'docker push onstb/onstb:latest'
-         			}
-     			  }
-    		}
-
-
-	/*	 stage('Docker compose') {
-      		      steps {
-	      sh 'docker stop cidb'
-               sh 'docker compose up '
-
-       }
-		 }  */
-
-		}
+            }
+        }
+        stage('Compiler Maven'){
+            steps {
+                sh "mvn compile"
+            }
+        }
+        stage('Junit/Mokito tests') {
+            steps {
+                sh 'mvn clean test -Dtest=EquipeJUnitTest,EtudiantMockitoTest'
+            }
+        }
+        stage('SonarQube Analysis') {
+            steps {
+                    sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=sonar -Dmaven.test.skip=true';
+            }
+        }
+        stage('Deploy artifact with Nexus ') {
+             steps {
+                 sh 'mvn deploy -DskipTests'
+             }
+         }
+    }
 }
