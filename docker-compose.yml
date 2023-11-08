@@ -1,39 +1,40 @@
-version: '3'
-
+version: '3.7'
 services:
-  mysql:
+  ci-db:
+    container_name: ci-db
     image: mysql:latest
-    container_name: mysql-container
+    networks:
+      - ci-network
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+      - MYSQL_ROOT_USERNAME=root
+      - MYSQL_ROOT_PASSWORD=0000
+      - MYSQL_DATABASE=kaddemdb
+    volumes:
+      - dbvol:/var/lib/mysql
     ports:
       - "3306:3306"
-    networks:
-      - mynetwork
-    volumes:
-      - mysql-data:/var/lib/mysql
+    restart: always
 
-  app:
-    image: onstb
-    container_name: spring-app
+  ci-app:
+    container_name: ci-spring
+    image: onstb/onstb:latest
     ports:
       - "8089:8089"
     networks:
-      - mynetwork
+      - ci-network
     depends_on:
-      - mysql
+      - ci-db
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/stationSki?createDatabaseIfNotExist=true
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: 0000
-      SPRING_JPA_HIBERNATE_DDL_AUTO: update
-      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQL5InnoDBDialect
-      LOGGING_LEVEL_ROOT: info
-      LOGGING_PATTERN_CONSOLE: '%d{yyyy-MM-dd HH:mm:ss} - %-5level- %logger{45} - %msg %n'
+      - MYSQL_HOST=ci-db
+      - MYSQL_ROOT_USERNAME=root
+      - MYSQL_ROOT_PASSWORD=0000
+      - MYSQL_DATABASE=kaddemdb
+      - MYSQL_PORT=3306
+    restart: always
 
 networks:
-  mynetwork:
-    driver: bridge
+  ci-network:
+    name: ci-network
 
 volumes:
-  mysql-data:
+  dbvol:
