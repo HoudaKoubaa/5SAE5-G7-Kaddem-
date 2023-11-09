@@ -41,5 +41,27 @@ pipeline {
                  sh 'mvn deploy -DskipTests'
              }
          }
+        stage('Build docker image'){
+            steps{
+                script{
+                    sh 'docker build -t korbiapp .'
+                }
+            }
+        }
+        stage('Push image to DockerHub') {
+            steps {
+                // login dockerhub
+                sh 'docker login -u seifkorbi -p dockerhub123'
+                // push image to dockerhub
+                sh 'docker tag korbiapp:latest seifkorbi/korbiapp:v1'
+                sh 'docker push seifkorbi/korbiapp:v1'
+            }
+        }
+        stage('Run Docker Compose') {
+             steps {
+                // Exécutez docker-compose up
+                sh 'docker compose up -d' // -d pour exécuter en arrière-plan
+            }
+        }
     }
 }

@@ -3,7 +3,7 @@ version: '3.7'
 services:
   # Spring Boot app container
   spring-app:
-    image: spring-app
+    image: seifkorbi/korbiapp:v1
     build:
       context: .
       dockerfile: Dockerfile
