@@ -1,0 +1,59 @@
+    version: '3.7'
+
+    services:
+      nexus:
+        image: sonatype/nexus3
+        ports:
+          - "8081:8081"
+        volumes:
+          - nexus-data:/nexus-data
+
+      sonarqube:
+        image: sonarqube
+        ports:
+          - "9000:9000"
+        volumes:
+          - SonarQube-data:/opt/sonarqube/data
+          - SonarQube-extensions:/opt/sonarqube/extensions
+          - SonarQube-logs:/opt/sonarqube/logs
+
+      my-db:
+        container_name: my-db
+        image: mysql:latest
+        networks:
+          - my-network
+        environment:
+          - MYSQL_ROOT_USERNAME=root
+          - MYSQL_ROOT_PASSWORD=
+          - MYSQL_DATABASE=db
+        volumes:
+          - dbvol:/var/lib/mysql
+        ports:
+          - "3390:3390"
+
+      my-app:
+        container_name: my-spring
+        image: hannachifedi/hannachifedi-5sae5-g7-kaddem:latest
+
+        build:
+          context: .
+          dockerfile: Dockerfile
+          args:
+            - BACKEND_IMAGE_NAME= hannachifedi/hannachifedi-5sae5-g7-kaddem:latest
+        ports:
+          - "8089:8089"
+        depends_on:
+          - my-db
+
+
+
+    networks:
+      my-network:
+        name: my-network
+
+    volumes:
+      dbvol:
+      nexus-data:
+      SonarQube-data:
+      SonarQube-extensions:
+      SonarQube-logs:
