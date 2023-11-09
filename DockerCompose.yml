@@ -41,8 +41,6 @@ services:
         - BACKEND_IMAGE_NAME= houdakoubaa/houdakoubaa-5sae5-g7-kaddem:latest
     ports:
       - "8083:8080"
-    depends_on:
-      - mysql-db
 
 
 
