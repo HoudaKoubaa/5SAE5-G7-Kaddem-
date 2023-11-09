@@ -29,7 +29,7 @@ services:
     volumes:
       - dbvol:/var/lib/mysql
     ports:
-      - "3307:3307"
+      - "3306:3306"
 
   my-app:
     container_name: my-spring
