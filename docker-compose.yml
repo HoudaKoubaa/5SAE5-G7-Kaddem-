@@ -10,7 +10,7 @@ services:
       args:
         - BACKEND_IMAGE_NAME=seifkorbi/korbiapp:v1
     ports:
-      - "8083:8080"
+      - "8083:8000"
     depends_on:
       - mysql-db
     environment:
