@@ -47,6 +47,8 @@ public class EtudiantTest {
         // Créez un étudiant factice pour les tests
         Etudiant etudiant = new Etudiant();
         etudiant.setIdEtudiant(111);
+        etudiant.setNomE("houda");
+        etudiant.setPrenomE("koubaa");
 
         // Configurez le comportement du repository pour retourner l'étudiant factice lorsque save est appelé
         when(etudiantRepository.save(eq(etudiant))).thenReturn(etudiant);

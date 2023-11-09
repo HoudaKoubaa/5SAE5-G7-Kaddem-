@@ -34,10 +34,15 @@ services:
   my-app:
     container_name: my-spring
     image: houdakoubaa/houdakoubaa-5sae5-g7-kaddem:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BACKEND_IMAGE_NAME= houdakoubaa/houdakoubaa-5sae5-g7-kaddem:latest
     ports:
-      - "8089:8089"
-    networks:
-      - my-network
+      - "8083:8080"
+    depends_on:
+      - mysql-db
 
 
 
