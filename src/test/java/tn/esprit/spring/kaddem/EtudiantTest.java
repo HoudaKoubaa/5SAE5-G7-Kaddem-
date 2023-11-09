@@ -1,5 +1,7 @@
 package tn.esprit.spring.kaddem;
 
+import lombok.extern.slf4j.Slf4j;
+import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,6 +12,7 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 import tn.esprit.spring.kaddem.entities.Etudiant;
 import tn.esprit.spring.kaddem.repositories.EtudiantRepository;
 import tn.esprit.spring.kaddem.services.EtudiantServiceImpl;
@@ -21,6 +24,7 @@ import java.util.List;
 import java.util.Optional;
 
 @SpringBootTest
+@Slf4j
 public class EtudiantTest {
 
     @InjectMocks
@@ -36,7 +40,6 @@ public class EtudiantTest {
         Assertions.assertNotNull(etudiants);
         Assertions.assertEquals(0, etudiants.size());
     }
-
 
 
 
